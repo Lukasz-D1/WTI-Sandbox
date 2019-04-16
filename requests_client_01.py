@@ -12,6 +12,9 @@ sample_rows.append(producer_02.get_dataframe_as_dict(producer_02.merge_user_rati
 sample_rows.append(producer_02.get_dataframe_as_dict(producer_02.merge_user_ratings_with_movie_genres())[3])
 sample_rows.append(producer_02.get_dataframe_as_dict(producer_02.merge_user_ratings_with_movie_genres())[4])
 
+first_get = requests.get(url='http://127.0.0.1:9875/ratings')
+print(first_get.text)
+
 r = requests.post(url='http://127.0.0.1:9875/rating', json=json.dumps(sample_rows[0]))
 print(r.text)
 
@@ -27,8 +30,8 @@ print(r4.text)
 r5 = requests.get(url='http://127.0.0.1:9875/ratings')
 print(r5.text)
 
-r6 = requests.delete(url='http://127.0.0.1:9875/ratings')
-print(r6.text)
+# r6 = requests.delete(url='http://127.0.0.1:9875/ratings')
+# print(r6.text)
 
 r7 = requests.get(url='http://127.0.0.1:9875/ratings')
 print(r7.text)
@@ -39,4 +42,5 @@ print(r8.text)
 r9 = requests.get(url='http://127.0.0.1:9875/avg-genre-ratings/75')
 print(r9.text)
 
-
+r10 = requests.get(url='http://127.0.0.1:9875/user-profile/75')
+print(r10.text)

@@ -58,4 +58,8 @@ def get_avg_genre_ratings_for_all_users():
 def get_avg_genre_rating_for_specific_user(userID):
     return json.dumps(api_logic_obj.compute_avg_genre_ratings_for_user(userID)), 201
 
+@app.route('/user-profile/<userID>', methods=['GET'])
+def get_user_profile(userID):
+    return json.dumps(api_logic_obj.compute_user_profile(userID)), 201
+
 server()

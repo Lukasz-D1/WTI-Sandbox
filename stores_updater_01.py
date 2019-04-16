@@ -3,6 +3,7 @@ import redis
 import json
 import numpy as np
 import producer_02
+import math
 
 class api_logic:
 
@@ -69,15 +70,18 @@ class api_logic:
         return user_averages
 
     def compute_user_profile(self, user_id):
+        user_id = int(user_id)
         self.compute_avg_genre_ratings()
         self.compute_avg_genre_ratings_for_user(user_id)
         self.avg_genre_ratings_for_user[user_id] = json.loads(self.redis_profiles_client.get("avg_genre_ratings_user_"+str(user_id)))
         self.avg_genres = json.loads(self.redis_profiles_client.get("avg_genre_ratings"))
         self.user_profile[user_id] = {key: self.avg_genre_ratings_for_user[user_id][key] - self.avg_genres.get(key, 0) for key in self.avg_genre_ratings_for_user[user_id].keys()}
+        user_profile_str = "user_profile_" + str(user_id)
+        self.redis_profiles_client.set(user_profile_str, json.dumps(self.user_profile[user_id]))
         return self.user_profile[user_id]
 
 if __name__ == '__main__':
     api_logic_obj = api_logic()
     api_logic_obj.compute_avg_genre_ratings()
     api_logic_obj.compute_avg_genre_ratings_for_user(75)
-    api_logic_obj.compute_user_profile(75)
+    print(api_logic_obj.compute_user_profile(75))
