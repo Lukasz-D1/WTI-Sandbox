@@ -18,7 +18,7 @@ user_ratings_columns = {
     'date_second': int
 }
 
-user_ratings = pd.read_csv('/home/lukasz/user_ratedmovies.dat', sep='\t', dtype=user_ratings_columns, encoding='latin=1')
+user_ratings = pd.read_csv('/home/lukasz/user_ratedmovies.dat', sep='\t', dtype=user_ratings_columns, encoding='latin=1', nrows=1000)
 
 movies_genres_columns = {
     'movieID': int,

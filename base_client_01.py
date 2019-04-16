@@ -35,16 +35,17 @@ def pull_dictionary_from_queue(queue_name):
     # https://redis.io/commands/lpop
     return redis_client.lpop(queue_name)
 
-queue_name = "queue_01"
-sample_dictionary = {
-    "a":1,
-    "b":2,
-    "c":3
-}
-send_dictionary_to_queue(queue_name, sample_dictionary)
+if __name__ == '__main__':
+    queue_name = "queue_01"
+    sample_dictionary = {
+        "a":1,
+        "b":2,
+        "c":3
+    }
+    send_dictionary_to_queue(queue_name, sample_dictionary)
 
-queue_name_temp = "queue_02"
-send_dictionary_to_queue(queue_name_temp, sample_dictionary)
+    queue_name_temp = "queue_02"
+    send_dictionary_to_queue(queue_name_temp, sample_dictionary)
 
 
 
