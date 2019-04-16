@@ -6,22 +6,32 @@ import json
 import random
 import stores_updater_01
 
+# Tworzenie aplikacji Flask, ktora umozliwi dzialanie naszego API
 app = Flask(__name__)
 
+# Tworzenie instancji obiektu obslugujacego Redisowe bazy danych (API Logic)
 api_logic_obj = stores_updater_01.api_logic()
 
+# Tworzenie serwera localhost na porcie 9875
 def server():
     app.run(host='127.0.0.1', port=9875)
 
+# Definicja endpointu '/', ktory zwraca Hello World
 @app.route('/')
 def hello_world():
     return 'Hello World!'
 
+# Definicja endpointu '/rating' - metoda POST
+# Umozliwia on dodanie pojedynczego ratingu do Redisowej listy ratingow
 @app.route('/rating', methods=['POST'])
 def add_rating():
+    # Pobierz new_rating w postaci JSON z wyslanego zapytania POST za pomoca flask.request.get_json()
     new_rating = flask.request.get_json()
+    # Przetworz pobrany w postaci JSON new_rating na slownik za pomoca json.loads(new_rating)
     new_rating_to_dict = json.loads(new_rating)
+    # Wywoluje metode add_rating() obietku api_logic, ktorej zadaniem jest obsluga dodawania new_rating do kolejki
     api_logic_obj.add_rating(new_rating_to_dict)
+    # Zwroc dodany rating, oraz 201 czyli informacje o sukcesie
     return new_rating, 201
 
 @app.route('/ratings', methods=['DELETE'])
@@ -32,10 +42,6 @@ def delete_ratings():
 @app.route('/ratings', methods=['GET'])
 def get_movie_ratings():
     return json.dumps(api_logic_obj.get_ratings()), 201
-
-@app.route('/all_ratings', methods=['GET'])
-def get_all_movie_ratings():
-    return producer_02.get_dataframe_as_json(producer_02.merge_user_ratings_with_movie_genres())
 
 @app.route('/avg-genre-ratings/all-users', methods=['GET'])
 def get_avg_genre_ratings_for_all_users():
