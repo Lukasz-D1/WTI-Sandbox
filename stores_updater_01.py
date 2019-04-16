@@ -14,7 +14,7 @@ class api_logic:
         self.user_profile = {}
         # Wybrana przeze mnie nazwa kolejki dla listy wszystkich ratingow
         self.queue_name = "ratings_list"
-        # Redisowa kolejka przechowujaca ratingi
+        # KLient redisa obslugujacy baze danych (kolejke), ktora przechowuje liste wszystkich ratingow
         self.redis_ratings_client = redis.StrictRedis(host='localhost', charset='utf-8', port=6381, db=2)
         self.redis_profiles_client = redis.StrictRedis(host='localhost', charset='utf-8', port=6381, db=1)
         self.ratings_list_name = "ratings_list"
@@ -30,17 +30,29 @@ class api_logic:
         # Poprzedni sposob, w ktorym zamiast dodawac do redisowej kolejki dodawalismy ratingi do prostej tablicy
         #self.raw_ratings_data.append(new_rating)
 
+    # Metoda obslugujaca pobieranie wszystkich ratingow z redisowej bazy
     def get_ratings(self):
+        # Deklaracja tymczasowej tablicy
         dummy_dict = []
+        # Za pomoca funkcji lrange wyciagamy wszystkie ratingi z okreslonej kolejki do zmiennej
         ratings_dummy = self.redis_ratings_client.lrange(self.queue_name, 0, -1)
+        # Ta petla zamienia kazdy element z powyzszej tablicy na slownik i dolacza go to tymczasowej tablicy zadeklarowanej na poczatku
         for value in ratings_dummy:
             dummy_dict.append(json.loads(value))
+        # Zwracamy tablice zawierajaca slowniki reprezentujace ratingi
+        # w formie JSON wymagana przez GET
         return json.dumps(dummy_dict)
+
+        # Wczesniej zwracalismy prosta tablice
         #return self.raw_ratings_data
 
+    # Metoda obslugujaca usuniecie ratingow z redisowej kolejki
     def delete_ratings(self):
+        # Do tymczasowej kolejki, wrzucamy wszystkie ratingi z bazy
         queue = self.get_ratings()
+        # Do zmiennej length_of_queue zapisujemy dlugosc powyzszej tymczasowej kolejki
         length_of_queue = len(queue)
+        # Usuwamy wszystkie rzeczy z kolejki za pomoca funkcji ltrim(<nazwa kolejki>, start, stop) wywolanej na odpowiednim kliencie redisa
         del_queue = self.redis_ratings_client.ltrim(self.queue_name, length_of_queue, -1)
         #self.raw_ratings_data=[]
 

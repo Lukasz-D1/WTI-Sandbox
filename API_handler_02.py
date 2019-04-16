@@ -34,14 +34,21 @@ def add_rating():
     # Zwroc dodany rating, oraz 201 czyli informacje o sukcesie
     return new_rating, 201
 
-@app.route('/ratings', methods=['DELETE'])
-def delete_ratings():
-    api_logic_obj.delete_ratings()
-    return "Deleted all ratings", 201
-
+# Definicja endpointu '/ratings' - metoda GET
+# Umozliwia on odczytanie wszystkich ratingow aktualnie znajdujacych sie w redisowej liscie przechowujacej ratingi
 @app.route('/ratings', methods=['GET'])
 def get_movie_ratings():
+    # Zwroc ratingi w formie JSON, oraz kod 201
     return json.dumps(api_logic_obj.get_ratings()), 201
+
+# Definicja endpointu '/ratings' - metoda DELETE
+# Umozliwia usuniecie wszystkich ratingow, ktore aktualnie przechowuje redisowa kolejka
+@app.route('/ratings', methods=['DELETE'])
+def delete_ratings():
+    # Wywolanie metody delete_ratings() obiektu api_logic
+    api_logic_obj.delete_ratings()
+    # Zwrocenie wiadomosci o usunieciu wszystkich ratingow
+    return "Deleted all ratings", 201
 
 @app.route('/avg-genre-ratings/all-users', methods=['GET'])
 def get_avg_genre_ratings_for_all_users():
