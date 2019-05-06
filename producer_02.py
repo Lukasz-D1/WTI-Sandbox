@@ -156,3 +156,26 @@ def user_dif(user_mean,all_mean):
     nans=np.isnan(pom)
     pom[nans]=0
     return new_mean,pom
+
+if __name__ == '__main__':
+    print('\nPivoted movie genres table:')
+    print(generate_pivoted_movie_genres_table())
+    print('\nMerged user ratings with pivoted movie genres:')
+    print(merge_user_ratings_with_movie_genres())
+    x,y = get_user_ratings_with_movie_genres()
+    print('\nMerged tables and genres names:')
+    print(x)
+    print(y)
+    a,b = calc_avg_for_genre(x,y)
+    print('\nAverages for genres:')
+    print(a)
+    print('\nUnbiased:')
+    print(b)
+    print('\nAverage for user:')
+    c,d = calc_avg_for_user(x,y,75)
+    print(c)
+    print('\nUser unbiased')
+    print(d)
+    print('\nUser profile:')
+    e,f = user_dif(c,a)
+    print(e)

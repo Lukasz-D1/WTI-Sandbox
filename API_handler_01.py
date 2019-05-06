@@ -66,4 +66,5 @@ def get_avg_genre_ratings_for_all_users():
 def get_avg_genre_rating_for_specific_user(userID):
     return json.dumps(random_values_for_genres_for_specific_user(userID)), 201
 
-server()
+if __name__ == '__main__':
+    server()

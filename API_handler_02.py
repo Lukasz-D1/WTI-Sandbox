@@ -62,4 +62,5 @@ def get_avg_genre_rating_for_specific_user(userID):
 def get_user_profile(userID):
     return json.dumps(api_logic_obj.compute_user_profile(userID)), 201
 
-server()
+if __name__ == '__main__':
+    server()

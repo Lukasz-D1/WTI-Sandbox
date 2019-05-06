@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d0cf2f7-9ff1-44e7-b039-9b7a901eb04a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/API_server_01.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API_handler_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_handler_01.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API_handler_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/API_handler_02.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/producer_02.py" beforeDir="false" afterPath="$PROJECT_DIR$/producer_02.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requests_client_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/requests_client_01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stores_updater_01.py" beforeDir="false" afterPath="$PROJECT_DIR$/stores_updater_01.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,94 +17,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base_client_01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="27" column="22" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/producer_01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consumer_01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/producer_02.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="122" column="49" lean-forward="true" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API_handler_01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-end-line="69" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requests_client_01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="44" column="18" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/stores_updater_01.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="78" column="57" lean-forward="true" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/API_handler_02.py">
+        <entry file="file://$PROJECT_DIR$/API_server_01.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="225">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding>
-                <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,12 +63,13 @@
       <list>
         <option value="$PROJECT_DIR$/producer_01.py" />
         <option value="$PROJECT_DIR$/consumer_01.py" />
+        <option value="$PROJECT_DIR$/base_client_01.py" />
+        <option value="$PROJECT_DIR$/stores_updater_01.py" />
+        <option value="$PROJECT_DIR$/API_handler_02.py" />
+        <option value="$PROJECT_DIR$/API_server_01.py" />
         <option value="$PROJECT_DIR$/API_handler_01.py" />
         <option value="$PROJECT_DIR$/producer_02.py" />
-        <option value="$PROJECT_DIR$/base_client_01.py" />
-        <option value="$PROJECT_DIR$/API_handler_02.py" />
         <option value="$PROJECT_DIR$/requests_client_01.py" />
-        <option value="$PROJECT_DIR$/stores_updater_01.py" />
       </list>
     </option>
   </component>
@@ -163,7 +85,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,11 +96,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PUT-Webscraper" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -194,28 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.requests_client_01">
-    <configuration name="API_handler_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="wti_proj_01" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_handler_01.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.API_handler_02">
     <configuration name="API_handler_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="wti_proj_01" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -234,13 +135,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="producer_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="API_server_01" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="wti_proj_01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/API_server_01.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="producer_02" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="wti_proj_01" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -277,6 +196,9 @@
       <module name="wti_proj_01" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -292,19 +214,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.API_handler_02" />
       <item itemvalue="Python.producer_02" />
-      <item itemvalue="Python.API_handler_01" />
       <item itemvalue="Python.requests_client_01" />
       <item itemvalue="Python.stores_updater_01" />
-      <item itemvalue="Python.API_handler_02" />
+      <item itemvalue="Python.API_server_01" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.requests_client_01" />
         <item itemvalue="Python.API_handler_02" />
-        <item itemvalue="Python.stores_updater_01" />
+        <item itemvalue="Python.requests_client_01" />
+        <item itemvalue="Python.API_server_01" />
         <item itemvalue="Python.producer_02" />
-        <item itemvalue="Python.API_handler_01" />
+        <item itemvalue="Python.stores_updater_01" />
       </list>
     </recent_temporary>
   </component>
@@ -380,33 +302,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/producer_01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="270">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API_handler_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-end-line="69" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base_client_01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -420,10 +322,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API_handler_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/producer_02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="122" column="49" lean-forward="true" selection-start-line="122" selection-start-column="49" selection-end-line="122" selection-end-column="49" />
+        <state relative-caret-position="540">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -432,8 +347,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/requests_client_01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="18" />
+        <state relative-caret-position="480">
+          <caret line="86" column="81" selection-start-line="86" selection-start-column="81" selection-end-line="86" selection-end-column="81" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -442,8 +357,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stores_updater_01.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="78" column="57" lean-forward="true" selection-start-line="78" selection-start-column="57" selection-end-line="78" selection-end-column="57" />
+        <state relative-caret-position="285">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -452,10 +367,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API_handler_02.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="240">
+          <caret line="50" column="37" lean-forward="true" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base_client_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API_server_01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
