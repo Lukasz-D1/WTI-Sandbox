@@ -27,6 +27,8 @@ movies_genres_columns = {
 
 movie_genres = pd.read_csv('/home/lukasz/movie_genres.dat', sep='\t', dtype=movies_genres_columns, encoding='latin-1')
 
+print('jestem glownym programem')
+
 def convert_dataframe_to_object(data_frame):
     # https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.astype.html
     return data_frame.astype(object)

@@ -4,6 +4,7 @@ import json
 import numpy as np
 import producer_02
 import math
+import pandas as pd
 
 class api_logic:
 
@@ -58,14 +59,27 @@ class api_logic:
         #self.raw_ratings_data=[]
 
     def compute_avg_genre_ratings(self):
-        self.avg_genres, merged_unbiased = producer_02.calc_avg_for_genre(self.user_ratings_with_genres, self.genres_column_names)
+        list_of_ratings = self.get_ratings()
+        list_of_ratings = json.loads(list_of_ratings)
+        df = pd.DataFrame.from_dict(list_of_ratings)
+        self.avg_genres, merged_unbiased = producer_02.calc_avg_for_genre(df, self.genres_column_names)
         avg_genres_key_str = "avg_genre_ratings"
+        for key, value in self.avg_genres.items():
+            if np.isnan(value):
+                self.avg_genres[key] = np.nan_to_num(self.avg_genres[key])
         self.redis_profiles_client.set(avg_genres_key_str, json.dumps(self.avg_genres))
         return self.avg_genres
 
     def compute_avg_genre_ratings_for_user(self, user_id):
-        user_averages, x = producer_02.calc_avg_for_user(self.user_ratings_with_genres, self.genres_column_names, user_id)
+        list_of_ratings = self.get_ratings()
+        list_of_ratings = json.loads(list_of_ratings)
+        df = pd.DataFrame.from_records(list_of_ratings)
+        user_averages, x = producer_02.calc_avg_for_user(df, self.genres_column_names, user_id)
         user_key_str = "avg_genre_ratings_user_" + str(user_id)
+        for key, value in user_averages.items():
+            if key[:6] == "genre-":
+                if np.isnan(user_averages[key]):
+                    user_averages[key] = np.nan_to_num(user_averages[key])
         self.redis_profiles_client.set(user_key_str, json.dumps(user_averages))
         return user_averages
 
@@ -84,4 +98,6 @@ if __name__ == '__main__':
     api_logic_obj = api_logic()
     api_logic_obj.compute_avg_genre_ratings()
     api_logic_obj.compute_avg_genre_ratings_for_user(75)
+    print(api_logic_obj.compute_avg_genre_ratings())
+    print(api_logic_obj.compute_avg_genre_ratings_for_user(75))
     print(api_logic_obj.compute_user_profile(75))
