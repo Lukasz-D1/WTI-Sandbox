@@ -1,7 +1,9 @@
 import cherrypy
 from paste.translogger import TransLogger
-from API_handler_02 import app
-
+# Redis
+#from API_handler_02 import app
+# Cassandra
+from API_handler_03 import app
 def run_server():
     # Enable WSGI access logging via Paste
     app_logged = TransLogger(app)
