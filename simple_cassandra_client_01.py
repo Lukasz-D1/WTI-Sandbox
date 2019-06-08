@@ -1,11 +1,13 @@
 from cassandra.cluster import Cluster
 from cassandra.query import dict_factory
 
+
 def create_keyspace(session, keyspace):
     session.execute("""
         CREATE KEYSPACE IF NOT EXISTS """ + keyspace + """
         WITH replication = {'class': 'SimpleStrategy', 'replication_factor':'1'}
     """)
+
 
 def create_table(session, keyspace, table):
     session.execute("""
@@ -16,11 +18,13 @@ def create_table(session, keyspace, table):
         )
     """)
 
+
 def push_data_table(session, keyspace,table,userID,avgMovieRating):
     session.execute("""
         INSERT INTO """ + keyspace + """.""" + table + """ (user_id, avg_movie_rating)
         VALUES (%(user_id)s, %(avg_movie_rating)s)
         """,{'user_id':userID, 'avg_movie_rating':avgMovieRating})
+
 
 def get_data_table(session, keyspace, table):
     rows = session.execute("SELECT * FROM " + keyspace + "." + table + ";")
